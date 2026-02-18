@@ -1,0 +1,44 @@
+* instalaremos npm install oh-vue-icons que ya trae todos los iconos de games-icons que queriamos utilizar
+
+*sparkle que siga el cursor
+
+
+
+
+
+1. El Fondo General (La Base)
+Color usado: El Gris Perla (#F4F5F8).
+
+Cómo se veía: No era un color plano. Era un fondo de paisaje de fantasía muy desenfocado (con nubes y luces suaves), usando ese tono gris casi blanco para que todo se sintiera luminoso y etéreo, sin distraer.
+
+2. Los Paneles y Tarjetas (El efecto Glassmorphism)
+Color usado: Blanco Puro con transparencia (aprox. 65%) y efecto de desenfoque (blur) por detrás.
+
+Cómo se veía: Había tres paneles principales flotando sobre el fondo: una barra lateral a la izquierda, una tarjeta de personaje grande al centro y un panel de inventario a la derecha. Parecían hechos de vidrio esmerilado. Los bordes de estos paneles eran muy redondeados y tenían un borde blanco fino y brillante.
+
+3. La Barra Lateral (Navegación)
+A la izquierda había un menú vertical.
+
+El botón activo ("Personajes"): Tenía un fondo suave usando el Rosa Paimon (#FFA7C4) y emitía un "brillo" (glow) rosado a su alrededor. El ícono (una espada) y el texto eran blancos.
+
+Los botones inactivos ("Mapa", "Ajustes"): Sus íconos (tipo línea, muy limpios) usaban el Cian Anemo (#88D8E0) o el Lila Electro (#B5A8E1) para dar toques de color sin robar atención.
+
+4. La Tarjeta Principal (Ficha de Personaje)
+En el centro, una tarjeta de "Lyra, Maga Elfa Nivel 5".
+
+Texto Principal: El nombre "Lyra" y los títulos de las estadísticas ("Fuerza", "Magia") usaban el Azul Noche (#3A3A4D) para leerse claramente.
+
+Barras de Progreso: Las barras de vida y magia estaban llenas con el Cian Anemo (#88D8E0) brillante, con un pequeño resplandor neón.
+
+Detalles de Lujo: Al lado del nivel "5", había una estrella dorada brillante usando el Dorado 5 Estrellas (#F3C969).
+
+Botón de Acción Principal: Abajo del todo, un botón grande y llamativo que decía "Crear Hechizo". Este botón usaba el Rosa Paimon (#FFA7C4) como color de fondo sólido, con un ícono de varita blanca. Era el elemento que más llamaba la atención.
+
+5. El Panel de Inventario
+A la derecha, una tarjeta más pequeña.
+
+Encabezado: El título "Inventario" tenía un fondo Lila Electro (#B5A8E1) suave para diferenciar esa sección.
+
+Íconos: Dentro había filas de íconos de game-icons.net (pociones, pergaminos). Cada pequeño ícono tenía un sutil resplandor de color detrás (rosa para pociones de vida, cian para maná) para que parecieran objetos mágicos flotando.
+
+Espero que esta descripción te ayude a visualizar cómo distribuir los colores. La clave era: fondos de cristal limpios, textos oscuros pero suaves, y usar el rosa, cian y lila para hacer que los elementos interactivos "brillen".

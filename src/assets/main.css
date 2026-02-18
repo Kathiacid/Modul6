@@ -1,0 +1,16 @@
+/* src/assets/main.css */
+@import "tailwindcss";
+
+@theme {
+  --color-arcane-bg: #fcfcfc;
+  --color-arcane-pink: #ff9cbd;
+  --color-arcane-mint: #62d2d6;
+  --color-arcane-sidebar: #ffffff;
+  --color-arcane-text: #333333;
+  --color-parchment: #fdfbf7; 
+}
+
+body {
+  background-color: var(--color-arcane-bg);
+  color: var(--color-arcane-text);
+}
