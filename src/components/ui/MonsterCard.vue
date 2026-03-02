@@ -1,5 +1,8 @@
 <template>
-  <div class="bg-parchment p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center transition-transform hover:-translate-y-1">
+  <div
+    v-glow
+    class="bg-parchment p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center transition-all hover:-translate-y-1 h-full relative"
+  >
 
     <router-link :to="{ name: 'monster-detail', params: { id: monster.id } }" class="flex flex-col items-center cursor-pointer group w-full">
       <img
@@ -29,13 +32,24 @@
       </div>
     </div>
 
+    <button
+      @click.stop="$emit('open-grimoire', monster)"
+      class="mt-auto w-full py-2 bg-white/50 hover:bg-arcane-pink hover:text-white text-gray-400 rounded-xl transition-all flex items-center justify-center gap-2 border border-gray-100 mt-4"
+    >
+      <font-awesome-icon icon="fa-solid fa-book" />
+      <span class="text-xs font-bold uppercase">Consultar Grimorio</span>
+    </button>
+
   </div>
 </template>
 
 <script setup>
 import TypeBadge from './TypeBadge.vue';
 
-// Recibimos el objeto completo del monstruo como prop
+// Definición de eventos para el componente padre
+defineEmits(['open-grimoire']);
+
+// Props
 defineProps({
   monster: {
     type: Object,

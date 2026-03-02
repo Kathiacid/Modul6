@@ -19,5 +19,19 @@
     <main class="flex-1 overflow-y-auto p-8">
       <router-view />
     </main>
+
+    <ToastMessage />
   </div>
 </template>
+
+<script setup>
+import { provide } from 'vue';
+import ToastMessage from '../components/ui/ToastMessage.vue';
+
+// Requerimiento Parte 7: Provide/Inject
+provide('campaignContext', {
+  name: 'Las Crónicas de Astrum',
+  level: 'Nivel 5',
+  dungeonMaster: 'El Archivero'
+});
+</script>

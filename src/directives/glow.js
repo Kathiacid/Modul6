@@ -1,0 +1,15 @@
+
+export const vGlow = {
+  mounted(el) {
+    el.style.transition = 'box-shadow 0.3s ease';
+
+    el.addEventListener('mouseenter', () => {
+
+      el.style.boxShadow = '0 0 20px 5px rgba(255, 156, 189, 0.4)';
+    });
+
+    el.addEventListener('mouseleave', () => {
+      el.style.boxShadow = 'none';
+    });
+  }
+};
