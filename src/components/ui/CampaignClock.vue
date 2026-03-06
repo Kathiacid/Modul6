@@ -12,14 +12,17 @@ const day = ref(1);
 let timer = null;
 
 onMounted(() => {
+  // 300,000 ms = 5 minutos
   timer = setInterval(() => {
     day.value++;
-    console.log("El tiempo fluye...");
-  }, 5000); // Aumenta cada 5 segundos
+    console.log("El tiempo fluye... Un nuevo día ha comenzado.");
+  }, 300000);
 });
 
 onUnmounted(() => {
-  clearInterval(timer); // Requerimiento: Destruir el intervalo
-  console.log("El tiempo se ha detenido.");
+  if (timer) {
+    clearInterval(timer);
+    console.log("El tiempo se ha detenido.");
+  }
 });
 </script>
