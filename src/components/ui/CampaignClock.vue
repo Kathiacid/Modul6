@@ -12,7 +12,7 @@ const day = ref(1);
 let timer = null;
 
 onMounted(() => {
-  // 300,000 ms = 5 minutos
+
   timer = setInterval(() => {
     day.value++;
     console.log("El tiempo fluye... Un nuevo día ha comenzado.");

@@ -56,9 +56,9 @@
     </div>
 
     <GrimoireModal
-      :monster="selectedMonster ? mapMonster(selectedMonster) : null"
-      @close="selectedMonster = null"
-    />
+  :monster="selectedMonster" 
+  @close="selectedMonster = null"
+/>
   </div>
 </template>
 
@@ -67,7 +67,7 @@ import { ref, onMounted, watch } from 'vue';
 import { useMonsters } from '../composables/useMonsters';
 import { monsterService } from '../services/monsterService';
 
-// Importación de componentes necesarios
+
 import MonsterCard from '../components/ui/MonsterCard.vue';
 import MonsterSkeleton from '../components/ui/MonsterSkeleton.vue';
 import MonsterSearch from '../components/ui/MonsterSearch.vue';
@@ -87,13 +87,11 @@ const isLoading = ref(true);
 const totalCount = ref(0);
 const selectedMonster = ref(null);
 
-// Función orquestadora de carga (Parte 8 y 9)
 const fetchMonsters = async () => {
   try {
     isLoading.value = true;
     const data = await monsterService.getMonsters(searchQuery.value, currentPage.value);
 
-    // Actualizamos el estado global en el composable
     updateMonsterData(data);
     totalCount.value = data.count;
   } catch (error) {
@@ -108,7 +106,6 @@ const changePage = (newPage) => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
-// Mapeo para mantener compatibilidad con las propiedades de MonsterCard y Detail
 const mapMonster = (m) => {
   if (!m) return null;
   return {
@@ -131,13 +128,11 @@ const mapMonster = (m) => {
   };
 };
 
-// Vigilamos cambios en la búsqueda para resetear a página 1 (Parte 9)
 watch(searchQuery, () => {
   currentPage.value = 1;
   fetchMonsters();
 });
 
-// Vigilamos cambios en la página (Parte 9)
 watch(currentPage, fetchMonsters);
 
 onMounted(fetchMonsters);

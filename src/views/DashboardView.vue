@@ -33,7 +33,7 @@ import { useSpellStore } from '../stores/spellStore';
 import CampaignClock from '../components/ui/CampaignClock.vue';
 import CombatLog from '../components/ui/CombatLog.vue';
 
-// Instanciamos los stores
+
 const bestiaryStore = useBestiaryStore();
 const spellStore = useSpellStore();
 
@@ -43,7 +43,6 @@ onMounted(async () => {
   try {
     loading.value = true;
 
-    // REQUERIMIENTO: Consumir stores en paralelo usando Promise.all
     await Promise.all([
       bestiaryStore.fetchMonsters(),
       spellStore.fetchSpells()

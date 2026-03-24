@@ -1,7 +1,7 @@
 <template>
   <div
     v-glow
-    class="bg-parchment p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center transition-all hover:-translate-y-1 h-full relative"
+    class="bg-parchment p-6 rounded-2xl  border border-gray-100 flex flex-col items-center text-center transition-all hover:-translate-y-1 h-full relative"
   >
 
     <router-link :to="{ name: 'monster-detail', params: { id: monster.id } }" class="flex flex-col items-center cursor-pointer group w-full">
@@ -46,10 +46,9 @@
 <script setup>
 import TypeBadge from './TypeBadge.vue';
 
-// Definición de eventos para el componente padre
+
 defineEmits(['open-grimoire']);
 
-// Props
 defineProps({
   monster: {
     type: Object,

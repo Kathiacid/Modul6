@@ -11,7 +11,7 @@ import * as d3 from 'd3';
 
 const svgRef = ref(null);
 
-// Datos estáticos requeridos
+
 const stats = [
   { stat: 'Fuerza', value: 18 },
   { stat: 'Destreza', value: 14 },
@@ -23,17 +23,15 @@ onMounted(() => {
   const width = 300;
   const height = 150;
 
-  // Escalas
   const x = d3.scaleBand()
     .domain(stats.map(d => d.stat))
     .range([0, width])
     .padding(0.3);
 
   const y = d3.scaleLinear()
-    .domain([0, 20]) // Rango máximo de stats en D&D
+    .domain([0, 20])
     .range([height, 0]);
 
-  // Renderizado de barras
   svg.selectAll("rect")
     .data(stats)
     .enter()
@@ -42,10 +40,10 @@ onMounted(() => {
     .attr("y", d => y(d.value))
     .attr("width", x.bandwidth())
     .attr("height", d => height - y(d.value))
-    .attr("fill", "#ec4899") // Color arcane-pink
+    .attr("fill", "#ec4899")
     .attr("rx", 4);
 
-  // Etiquetas de texto
+
   svg.selectAll("text")
     .data(stats)
     .enter()

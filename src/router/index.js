@@ -20,13 +20,10 @@ const router = createRouter({
         { path: 'bestiary', name: 'bestiary', component: BestiaryView },
         {
           path: 'monster/:id',
-          // Quitamos el 'name' de aquí para que no choque con el hijo
           component: MonsterDetail,
           props: true,
           children: [
-            // Esta es la ruta por defecto: /monster/1
             { path: '', name: 'monster-detail', component: MonsterStats },
-            // Esta es la ruta de historia: /monster/1/lore
             { path: 'lore', name: 'monster-lore', component: MonsterLore }
           ]
         }

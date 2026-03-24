@@ -1,10 +1,10 @@
 <script setup>
 import { useCharacterStore } from '../../stores/characterStore';
-import { computed } from 'vue'; // <--- AGREGAR ESTA LÍNEA
+import { computed } from 'vue';
 const props = defineProps(['spell']);
 const characterStore = useCharacterStore();
 
-// Comprobamos si el hechizo está en el store persistente
+
 const isPrepared = computed(() =>
   characterStore.preparedSpells.includes(props.spell.slug)
 );

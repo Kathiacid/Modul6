@@ -20,10 +20,9 @@ const { searchQuery } = useMonsters();
 let timeout = null;
 
 const handleInput = (e) => {
-  // Limpiamos el timer anterior si el usuario sigue escribiendo
+
   clearTimeout(timeout);
 
-  // Seteamos un nuevo timer de 400ms
   timeout = setTimeout(() => {
     searchQuery.value = e.target.value;
   }, 400);

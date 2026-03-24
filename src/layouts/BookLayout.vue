@@ -28,7 +28,6 @@
 import { provide } from 'vue';
 import ToastMessage from '../components/ui/ToastMessage.vue';
 
-// Requerimiento Parte 7: Provide/Inject
 provide('campaignContext', {
   name: 'Las Crónicas de Astrum',
   level: 'Nivel 5',

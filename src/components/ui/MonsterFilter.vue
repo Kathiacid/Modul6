@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-// defineModel enlaza directamente con la variable del padre
+
 const model = defineModel()
 
 const types = ['Bestia', 'No-muerto', 'Dragón']

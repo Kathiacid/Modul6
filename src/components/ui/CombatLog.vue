@@ -23,7 +23,7 @@ const rollDice = () => {
   logs.value.push(`Tirada de ataque: ${result}`);
 };
 
-// Autoscroll usando nextTick
+
 watch(logs, async () => {
   await nextTick();
   if (logContainer.value) {

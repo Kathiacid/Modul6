@@ -2,7 +2,7 @@ import { defineStore } from 'pinia';
 
 export const useCharacterStore = defineStore('character', {
   state: () => ({
-    preparedSpells: [] // Array de IDs
+    preparedSpells: []
   }),
   actions: {
     togglePreparedSpell(spellId) {
@@ -14,5 +14,5 @@ export const useCharacterStore = defineStore('character', {
       }
     }
   },
-  persist: true // Requerimiento: Persistencia activada
+  persist: true
 });
